@@ -1,0 +1,65 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z2r3p17.42.us.org
+Darwin 15.6.0 x86_64
+$> date
+Sat Jun 16 21:05:40 PDT 2018
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 8.0.0 (clang-800.0.38)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 8.0.0 (clang-800.0.38)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2018/c-exam-alone-in-the-dark-intermediate/practice-exam_20180617/tyang
+
+= Git history ==================================================================
+$> git -C /var/folders/97/qpsq8lcx3kxdx6wbrznc5n600000gp/T/tmpVQ7wyc/user log --pretty='%H - %an, %ad : %s'
+6b5be643939db5cf4c7dd6a8bf530df8fa60198b - Taylor Yang, Sat Jun 16 21:05:21 2018 -0700 : lv1
+734f742367ce301dc995d3eb6c836f712c6198f2 - Taylor Yang, Sat Jun 16 19:37:44 2018 -0700 : lv0
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/97/qpsq8lcx3kxdx6wbrznc5n600000gp/T/tmpVQ7wyc/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  482 Jun 16 21:05 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Jun 16 21:05 equation
+drwxr-xr-x  3 deepthought  deepthought  102 Jun 16 21:05 queue
+
+/var/folders/97/qpsq8lcx3kxdx6wbrznc5n600000gp/T/tmpVQ7wyc/user/equation:
+total 8
+-rw-r--r--  1 deepthought  deepthought  278 Jun 16 21:05 equation.c
+
+/var/folders/97/qpsq8lcx3kxdx6wbrznc5n600000gp/T/tmpVQ7wyc/user/queue:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1854 Jun 16 21:05 queue.c
+ 
+= queue ========================================================================
+$> gcc -Wextra -Wall -Werror main.c queue.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./eqfjdzlj93qeiikftrb8asx8 NULL
+$> diff -U 3 user_output_test1 test1.output | cat -e
+--- user_output_test1	2018-06-16 21:05:46.000000000 -0700$
++++ test1.output	2018-06-16 21:05:46.000000000 -0700$
+@@ -15,7 +15,7 @@$
+ queue 2 : is empty : NO$
+ TEST 3 --------------------------$
+ queue 2 : peek : NULL$
+-queue 1 : is empty : YES$
++queue 1 : is empty : NO$
+ queue 2 : is empty : YES$
+-queue 1 : dequeue : (null)$
++queue 1 : dequeue : NULL$
+ queue 1 : is empty : YES$
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 0 ===============================================================
